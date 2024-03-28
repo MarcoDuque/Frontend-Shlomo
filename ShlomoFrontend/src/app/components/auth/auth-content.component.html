@@ -1,0 +1,36 @@
+<body>
+  <div class="card text-center form">
+    <div class="card-header">
+      Shlomo Software
+    </div>
+    <div class="card-body">
+        <form [formGroup]="loginForm">
+
+          <img class="logo" src="../../../assets/images/getShlomo.png"/>
+
+          <div class="input-group flex-nowrap">
+            <span class="input-group-text">
+              <i class="bi bi-person-circle"></i>
+            </span>
+            <input type="text" class="form-control"
+             placeholder="Username" formControlName="username">
+          </div>
+
+          <div class="input-group flex-nowrap mt-2">
+            <span class="input-group-text">
+              <i class="bi bi-fingerprint"></i>
+            </span>
+            <input type="password" class="form-control"
+             placeholder="Password" formControlName="password">
+          </div>
+
+          <input type="submit" class="btn btn-primary mt-2"
+           value="login" [disabled]="!loginForm.valid" 
+          routerLink="/home">
+        </form>
+    </div>
+    <div class="card-footer text-muted">
+      2024
+    </div>
+  </div>
+</body>
