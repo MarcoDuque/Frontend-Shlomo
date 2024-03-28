@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common'
-import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+
+  @Input() pageTittle!: string;
+  @Input() logoSrc!: string;
 
   constructor() { }
 
